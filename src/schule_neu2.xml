@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schule>
+  <Klasse>
+    <Ort Schueler="24">4AHIF</Ort>
+    <Unterricht>POS</Unterricht>
+  </Klasse>
+  <Klasse>
+    <Ort Schueler="16">4BHIF</Ort>
+    <Unterricht>NVS</Unterricht>
+  </Klasse>
+  <Klasse>
+    <Ort Schueler="26">4CHIF</Ort>
+    <Unterricht>SYP</Unterricht>
+  </Klasse>
+  <Klasse>
+    <Ort Schueler="23">4DHIF</Ort>
+    <Unterricht>MAM</Unterricht>
+  </Klasse>
+</Schule>
