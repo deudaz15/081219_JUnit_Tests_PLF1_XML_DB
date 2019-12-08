@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Schule>
   <Klasse>
-    <Ort Schueler="21">4AHIF</Ort>
+    <Ort Schueler="240">4AHIF</Ort>
     <Unterricht>POS</Unterricht>
   </Klasse>
   <Klasse>
@@ -17,3 +17,4 @@
     <Unterricht>MAM</Unterricht>
   </Klasse>
 </Schule>
+

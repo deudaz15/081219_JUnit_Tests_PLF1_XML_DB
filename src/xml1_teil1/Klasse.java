@@ -22,6 +22,14 @@ public class Klasse {
         
     }
 
+    public Klasse(String ort, int schueler, String unterricht)
+    {
+        this.ort = ort;
+        this.schueler = schueler;
+        this.unterricht = unterricht;
+    }
+    
+
    
    
     @Override
@@ -31,4 +39,20 @@ public class Klasse {
  
     //todo
 
+    public String getOrt()
+    {
+        return ort;
+    }
+
+    public int getSchueler()
+    {
+        return schueler;
+    }
+
+    public String getUnterricht()
+    {
+        return unterricht;
+    }
+
+    
 }
