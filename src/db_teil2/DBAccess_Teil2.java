@@ -21,7 +21,8 @@ public class DBAccess_Teil2 {
         Connection con = DriverManager.getConnection(DBProperties.URL,DBProperties.USERNAME,DBProperties.PASSWORD);
         List addresses=new ArrayList();
         PreparedStatement pstmt=con.prepareCall(AddressSQL.PSTMT_FIND_ADDRESS_BY_USERID+" ORDER BY a.city");
-        pstmt.setString(1, ""+userId);
+        pstmt.setInt(1, userId);
+        //pstmt.setString(1, ""+userId);
         ResultSet rs=pstmt.executeQuery();
         while(rs.next()){
             List l=new ArrayList();
