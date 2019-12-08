@@ -6,12 +6,10 @@ public class Insurance {
 
     private String insName;
     private Integer piduser;
-    private String pnumber;
 
-    public Insurance(String insName, Integer piduser, String pnumber) {
+    public Insurance(String insName, Integer piduser) {
         this.insName = insName;
         this.piduser = piduser;
-        this.pnumber = pnumber;
     }
 
     public String getInsName() {
@@ -30,20 +28,12 @@ public class Insurance {
         this.piduser = piduser;
     }
 
-    public String getPnumber() {
-        return pnumber;
-    }
-
-    public void setPnumber(String pnumber) {
-        this.pnumber = pnumber;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 5;
         hash = 37 * hash + Objects.hashCode(this.insName);
         hash = 37 * hash + Objects.hashCode(this.piduser);
-        hash = 37 * hash + Objects.hashCode(this.pnumber);
         return hash;
     }
 
@@ -62,18 +52,11 @@ public class Insurance {
         if (!Objects.equals(this.insName, other.insName)) {
             return false;
         }
-        if (!Objects.equals(this.pnumber, other.pnumber)) {
-            return false;
-        }
         if (!Objects.equals(this.piduser, other.piduser)) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Insurance{" + "insName=" + insName + ", piduser=" + piduser + ", pnumber=" + pnumber + '}';
-    }
 
 }

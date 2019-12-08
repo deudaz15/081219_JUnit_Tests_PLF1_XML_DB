@@ -60,10 +60,9 @@ public class Test_DB1
     public void testDB_Teil1(){
         try
         {
-            List result;
+            List<Insurance> result;
             Map<Integer, String> expected;
             result = DBAccess_Teil1.getInsurance();
-            //Collections.sort(result);
             
             expected = new TreeMap();
             expected.put(1, "life");
@@ -73,22 +72,18 @@ public class Test_DB1
             expected.put(5, "fire");
             expected.put(6, "risk");
             
-            int id;
-            Iterator<Insurance> it;
-            Insurance curr;
-            
-            for(int i = 0; i < 6; i++){
-                it = result.iterator();
-                id = i+1;
-                while(it.hasNext()){
-                    curr = it.next();
-                    if(curr.getPiduser() == id){
-                        assertEquals(expected.get(id), curr.getInsName());
+            Insurance insurance = null;
+            for(int id = 1; id <= result.size(); id++){
+                //get from results where id = i
+                for(int j = 0; j < result.size(); j++){
+                    System.out.println(result.get(j));
+                    if(result.get(j).getPiduser().equals(id)){
+                        insurance = result.get(j);
+                        break;
                     }
                 }
                 
-                //assertEquals(expected.get(i+1), result.get(i));
-                
+                assertEquals(expected.get(id), insurance.getInsName());
             }
             
             //assertEquals("[[2, car], [5, fire], [1, life], [3, pet], [6, risk], [4, vehicle]]", DBAccess_Teil1.getInsurance());

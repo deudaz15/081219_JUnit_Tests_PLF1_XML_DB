@@ -17,16 +17,13 @@ public class DBAccess_Teil1 {
         System.out.println(getInsurance());
     }
     public static List getInsurance() throws SQLException, ClassNotFoundException{
-        List insurences=new ArrayList();
+        List<Insurance> insurences=new ArrayList();
         Class.forName(DBProperties.DRIVER);
         Connection con = DriverManager.getConnection(DBProperties.URL,DBProperties.USERNAME,DBProperties.PASSWORD);
         Statement stmt=con.createStatement();
         ResultSet rs=stmt.executeQuery("SELECT * FROM insurance ORDER BY name");
         while(rs.next()){
-            List l=new ArrayList();
-            l.add(rs.getObject(1));
-            l.add(rs.getObject(2));
-            insurences.add(l);
+            insurences.add(new Insurance(rs.getString(2), rs.getInt(1)));
         }
         return insurences;
     }
